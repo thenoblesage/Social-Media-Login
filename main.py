@@ -18,7 +18,7 @@ kivy.require('1.11.1')
 class LoginScreen(GridLayout):
 
     def authenticate(self, touch):
-        '''if self.username.text == 'dastullo' and self.password.text == 'Sageismine':
+        '''if self.username.text == '<app-user>' and self.password.text == '<app-password>':
             print('Access Granted!')
             Window.size = (500, 200)
             login.sm.current = 'menu'
@@ -70,16 +70,16 @@ class MenuScreen(BoxLayout):
         cols = 1
         grid = GridLayout(cols = 2)
         ig_btn = Button(text = 'Instagram')
-        ig_call = partial(self.LoginBot, call = 0, username = 'iammustard_dast', password = 'Mustard@1993')
+        ig_call = partial(self.LoginBot, call = 0, username = '<Enter Username>', password = '<Enter Password>')
         ig_btn.bind(on_release = ig_call)
         fb_btn = Button(text = 'Facebook')
-        fb_call = partial(self.LoginBot, call = 1, username = '8764810845', password = 'newton1664')
+        fb_call = partial(self.LoginBot, call = 1, username = '<Enter Username>', password = '<Enter Password>')
         fb_btn.bind(on_release = fb_call)
         r_btn = Button(text = 'Reddit')
-        r_call = partial(self.LoginBot, call = 2, username = 'thenoblesage', password = 'Mustard@1993')
+        r_call = partial(self.LoginBot, call = 2, username = '<Enter Username>', password = '<Enter Password>')
         r_btn.bind(on_release = r_call)
         gh_btn = Button(text='Git Hub')
-        gh_call = partial(self.LoginBot, call = 3, username = 'thenoblesage', password = 'Mustard@1993')
+        gh_call = partial(self.LoginBot, call = 3, username = '<Enter Username>', password = '<Enter Password>')
         gh_btn.bind(on_release = gh_call)
         grid.add_widget(ig_btn)
         grid.add_widget(fb_btn)
